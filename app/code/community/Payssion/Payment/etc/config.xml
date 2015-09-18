@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Payssion_Payment>
+            <version>1.0.0</version>
+        </Payssion_Payment>
+    </modules>
+
+    <global>
+
+        <models>
+            <payssion>
+                <class>Payssion_Payment_Model</class>
+            </payssion>
+        </models>
+
+        <blocks>
+            <payssion>
+                <class>Payssion_Payment_Block</class>
+            </payssion>
+        </blocks>
+
+        <resources>
+            <payssion_setup>
+                <setup>
+                    <module>Payssion_Payment</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </payssion_setup>
+            <payssion_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </payssion_write>
+            <payssion_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </payssion_read>
+        </resources>
+        <helpers>
+            <payssion>
+                <class>Payssion_Payment_Helper</class>
+            </payssion>
+        </helpers>
+    </global>
+
+
+    <frontend>
+        <secure_url>
+            <payssion_redirect>/payssion/redirect/00</payssion_redirect>
+        </secure_url>
+        <routers>
+            <payssion>
+                <use>standard</use>
+                <args>
+                    <module>Payssion_Payment</module>
+                    <frontName>payssion</frontName>
+                </args>
+            </payssion>
+        </routers>
+        <translate>
+            <modules>
+                <Payssion_Payment>
+                    <files>
+                        <default>Payssion_Payment.csv</default>
+                    </files>
+                </Payssion_Payment>
+            </modules>
+        </translate>
+    </frontend>
+
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Payssion_Payment>
+                    <files>
+                        <default>Payssion_Payment.csv</default>
+                    </files>
+                </Payssion_Payment>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <payssion>
+                <active>0</active>
+                <model>payssion/payssion</model>
+                <title>payssion.com</title>
+            </payssion>
+        </payment>
+    </default>
+</config>

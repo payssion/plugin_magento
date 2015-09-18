@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Payssion_Payment>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Payment/>
+            </depends>
+        </Payssion_Payment>
+    </modules>
+</config>
