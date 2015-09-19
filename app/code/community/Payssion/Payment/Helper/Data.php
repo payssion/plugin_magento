@@ -22,4 +22,15 @@ class Payssion_Payment_Helper_Data extends Mage_Core_Helper_Abstract
 		}
 		return trim(Mage::getStoreConfig("payment/$paymentMethodCode/$code", $storeId));
 	}
+	
+	public function getPaymentMethodIcon($paymentMethodCode) {
+		if ($paymentMethodCode) {
+			$index = strrpos($paymentMethodCode, '_');
+			if ($index) {
+				$icon = strtolower(substr($class_name, $index + 1));
+				return "images/payssion/$icon.png";
+			}
+		}
+		return null;
+	}
 }

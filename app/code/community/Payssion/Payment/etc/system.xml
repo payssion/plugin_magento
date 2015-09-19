@@ -11,32 +11,6 @@
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
 					<fields>
-						<title translate="label">
-							<label>Title</label>
-							<frontend_type>text</frontend_type>
-							<sort_order>2</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>0</show_in_store>
-						</title>
-						<label>Boleto (via Payssion)</label>
-						<frontend_type>text</frontend_type>
-						<sort_order>1</sort_order>
-						<show_in_default>1</show_in_default>
-						<show_in_website>1</show_in_website>
-						<show_in_store>0</show_in_store>
-						<fields>
-							<active translate="label">
-								<label>Enabled</label>
-								<frontend_type>select</frontend_type>
-								<source_model>adminhtml/system_config_source_yesno
-								</source_model>
-								<sort_order>2</sort_order>
-								<show_in_default>1</show_in_default>
-								<show_in_website>1</show_in_website>
-								<show_in_store>1</show_in_store>
-							</active>
-						</fields>
 						<payssion_apikey translate="label,comment">
 							<label>API Key</label>
 							<comment>You can find the API Key in your app setting at your
@@ -73,26 +47,7 @@
 						</payssion_sandbox>
 					</fields>
 				</payssion>
-				<payssionboleto translate="label" module="payssion">
-					<label>Boleto (via Payssion)</label>
-					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
-					<show_in_default>1</show_in_default>
-					<show_in_website>1</show_in_website>
-					<show_in_store>0</show_in_store>
-					<fields>
-						<active translate="label">
-							<label>Enabled</label>
-							<frontend_type>select</frontend_type>
-							<source_model>adminhtml/system_config_source_yesno</source_model>
-							<sort_order>2</sort_order>
-							<show_in_default>1</show_in_default>
-							<show_in_website>1</show_in_website>
-							<show_in_store>1</show_in_store>
-						</active>
-					</fields>
-				</payssionboleto>
-				<payssion7elevenmy>
+				<payssion_7elevenmy>
 					<label>7­eleven Malaysia (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -110,8 +65,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssion7elevenmy>
-				<payssionaffinepgmy>
+				</payssion_7elevenmy>
+				<payssion_affinepgmy>
 					<label>Affin Bank (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -129,8 +84,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionaffinepgmy>
-				<payssionambmy>
+				</payssion_affinepgmy>
+				<payssion_ambmy>
 					<label>Am Online (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -148,8 +103,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionambmy>
-				<payssionatmvaid>
+				</payssion_ambmy>
+				<payssion_atmvaid>
 					<label>Indonesia ATM Transfer (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -167,8 +122,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionatmvaid>
-				<payssionbanamex>
+				</payssion_atmvaid>
+				<payssion_banamexmx>
 					<label>Banamex (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -186,8 +141,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionbanamex>
-				<payssionbancodobrasil>
+				</payssion_banamexmx>
+				<payssion_bancodobrasilbr>
 					<label>Banco do Brasil (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -205,8 +160,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionbancodobrasil>
-				<payssionbancomer>
+				</payssion_bancodobrasilbr>
+				<payssion_bancomerbr>
 					<label>Bancomer(BBVA) (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -224,8 +179,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionbancomer>
-				<payssionboleto>
+				</payssion_bancomerbr>
+				<payssion_boletobr>
 					<label>Boleto (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -243,8 +198,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionboleto>
-				<payssionbradesco>
+				</payssion_boletobr>
+				<payssion_bradescobr>
 					<label>Bradesco (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -262,8 +217,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionbradesco>
-				<payssioncaixa>
+				</payssion_bradescobr>
+				<payssion_caixabr>
 					<label>Caixa Brazil (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -281,8 +236,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssioncaixa>
-				<payssioncashu>
+				</payssion_caixabr>
+				<payssion_cashu>
 					<label>CashU (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -300,8 +255,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssioncashu>
-				<payssioncherrycredits>
+				</payssion_cashu>
+				<payssion_cherrycredits>
 					<label>cherrycredits (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -319,8 +274,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssioncherrycredits>
-				<payssioncimbmy>
+				</payssion_cherrycredits>
+				<payssion_cimbmy>
 					<label>CIMB (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -338,8 +293,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssioncimbmy>
-				<payssiondragonpayph>
+				</payssion_cimbmy>
+				<payssion_dragonpayph>
 					<label>Dragonpay (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -357,8 +312,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssiondragonpayph>
-				<payssionenetssg>
+				</payssion_dragonpayph>
+				<payssion_enetssg>
 					<label>eNETS Debit (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -376,8 +331,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionenetssg>
-				<payssionepaymy>
+				</payssion_enetssg>
+				<payssion_epaymy>
 					<label>epay (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -395,8 +350,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionepaymy>
-				<payssionesapaymy>
+				</payssion_epaymy>
+				<payssion_esapaymy>
 					<label>EsaPAY (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -414,8 +369,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionesapaymy>
-				<payssionfpxmy>
+				</payssion_esapaymy>
+				<payssion_fpxmy>
 					<label>MyClear FPX (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -433,8 +388,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionfpxmy>
-				<payssionhlbmy>
+				</payssion_fpxmy>
+				<payssion_hlbmy>
 					<label>Hong Leong Connect (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -452,8 +407,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionhlbmy>
-				<payssionitau>
+				</payssion_hlbmy>
+				<payssion_itaubr>
 					<label>Banco Itaú (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -471,8 +426,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionitau>
-				<payssionmaybank2umy>
+				</payssion_itaubr>
+				<payssion_maybank2umy>
 					<label>Maybank2u (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -490,8 +445,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionmaybank2umy>
-				<payssionneosurf>
+				</payssion_maybank2umy>
+				<payssion_neosurf>
 					<label>neosurf (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -509,8 +464,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionneosurf>
-				<payssionnganluongvn>
+				</payssion_neosurf>
+				<payssion_nganluongvn>
 					<label>Nganluong (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -528,8 +483,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionnganluongvn>
-				<payssiononecard>
+				</payssion_nganluongvn>
+				<payssion_onecard>
 					<label>onecard (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -547,8 +502,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssiononecard>
-				<payssionopenbucks>
+				</payssion_onecard>
+				<payssion_openbucks>
 					<label>Openbucks (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -566,8 +521,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionopenbucks>
-				<payssionoxxo>
+				</payssion_openbucks>
+				<payssion_oxxomx>
 					<label>Oxxo (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -585,8 +540,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionoxxo>
-				<payssionpaysafecard>
+				</payssion_oxxomx>
+				<payssion_paysafecard>
 					<label>paysafecard (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -604,8 +559,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionpaysafecard>
-				<payssionpaysbuyth>
+				</payssion_paysafecard>
+				<payssion_paysbuyth>
 					<label>Paysbuy (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -623,8 +578,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionpaysbuyth>
-				<payssionmolpay>
+				</payssion_paysbuyth>
+				<payssion_molpay>
 					<label>MOLPay (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -642,8 +597,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionmolpay>
-				<payssionpoliau>
+				</payssion_molpay>
+				<payssion_poliau>
 					<label>Australia bank transfer (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -661,8 +616,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionpoliau>
-				<payssionpolinz>
+				</payssion_poliau>
+				<payssion_polinz>
 					<label>New Zealand bank transfer (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -680,8 +635,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionpolinz>
-				<payssionqiwi>
+				</payssion_polinz>
+				<payssion_qiwi>
 					<label>QIWI (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -699,8 +654,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionqiwi>
-				<payssionrhbmy>
+				</payssion_qiwi>
+				<payssion_rhbmy>
 					<label>RHB Now (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -718,8 +673,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionrhbmy>
-				<payssionsantandermx>
+				</payssion_rhbmy>
+				<payssion_santandermx>
 					<label>Santander Mexico (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -737,8 +692,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionsantandermx>
-				<payssionsingpostsg>
+				</payssion_santandermx>
+				<payssion_singpostsg>
 					<label>SAM by SingPost (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -756,8 +711,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionsingpostsg>
-				<payssionsofort>
+				</payssion_singpostsg>
+				<payssion_sofort>
 					<label>SOFORT (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -775,8 +730,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionsofort>
-				<payssiontrustpay>
+				</payssion_sofort>
+				<payssion_trustpay>
 					<label>European Bank Transfer (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -794,8 +749,8 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssiontrustpay>
-				<payssionwebcashmy>
+				</payssion_trustpay>
+				<payssion_webcashmy>
 					<label>Webcash (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -813,7 +768,7 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssionwebcashmy>
+				</payssion_webcashmy>
 			</groups>
 		</payment>
 	</sections>

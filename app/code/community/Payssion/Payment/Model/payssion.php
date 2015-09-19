@@ -8,8 +8,6 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     protected $_infoBlockType = 'payssion/info';
     protected $_order;
     
-    const     API_KEY       = 'payment/payssion/payssion_apikey';
-    const     SECRET_KEY       = 'payment/payssion/payssion_secretkey';
     protected $pm_id = '';
     
     public function __construct()
@@ -30,7 +28,12 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     }
 
     public function getPayssionUrl() {
-        $url = 'https://www.Payssion.com/process.html';
+    	$sandbox = Mage::helper('payssion')->getConfigData('payssion_sandbox');
+    	if (!$sandbox) {
+    		$url = 'https://www.payssion.com/payment/create.html';
+    	} else {
+    		$url = 'http://sandbox.payssion.com/payment/create.html';
+    	}
         return $url;
     }
 
@@ -54,7 +57,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         }
       
         $params = array(
-            'api_key'           => Mage::getStoreConfig(Payssion_Payment_Model_Payssion::API_KEY),
+            'api_key'           => Mage::helper('payssion')->getConfigData('payssion_apikey'),
         	'pm_id' => $this->pm_id,
         	'track_id'            => $order_id,
             'success_url'     => Mage::getUrl('payssion/redirect/success', array('transaction_id' => $order_id)),
@@ -68,7 +71,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
             'payer_email'        => $email,
         );
         
-        $params['api_sig'] = $this->generateSignature($params, Mage::getStoreConfig(Payssion_Payment_Model_Payssion::SECRET_KEY));
+        $params['api_sig'] = $this->generateSignature($params, Mage::helper('payssion')->getConfigData('payssion_secretkey'));
         return $params;
     }
     
