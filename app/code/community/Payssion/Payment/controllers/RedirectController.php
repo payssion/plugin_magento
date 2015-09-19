@@ -20,7 +20,7 @@ class Payssion_Payment_RedirectController extends Mage_Core_Controller_Front_Act
         $this->getResponse()
                 ->setHeader('Content-type', 'text/html; charset=utf8')
                 ->setBody($this->getLayout()
-                ->createBlock('okpay/redirect')
+                ->createBlock('payssion/redirect')
                 ->toHtml());
     }
     

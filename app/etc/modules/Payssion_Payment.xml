@@ -3,11 +3,9 @@
     <modules>
         <Payssion_Payment>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
             <depends>
-                <Mage_Paygate/>
-                <Mage_Checkout/>
-                <Mage_Sales/>
+                <Mage_Payment/>
             </depends>
         </Payssion_Payment>
     </modules>

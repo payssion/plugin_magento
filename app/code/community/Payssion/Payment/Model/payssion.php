@@ -40,6 +40,10 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     }
     
     public function getPayssionCheckoutFormFields() {
+    	
+    	$class_name = get_class($this);
+    	$index = strrpos($class_name, 'Payssion');
+    	$id = strtolower(substr($class_name, $index));
 
         $order_id = $this->getCheckout()->getLastRealOrderId();
         $order    = Mage::getModel('sales/order')->loadByIncrementId($order_id);

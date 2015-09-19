@@ -5,7 +5,7 @@ class Payssion_Payment_Block_Redirect extends Mage_Core_Block_Abstract
 {
     protected function _toHtml()
     {
-        $payssion = Mage::getModel('payssion/checkout');
+        $payssion = Mage::getModel('payssion/payssion');
 
         $form = new Varien_Data_Form();
         $form->setAction($payssion->getPayssionUrl())

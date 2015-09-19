@@ -1,11 +1,130 @@
-<config>
-    <modules>
-        <Payssion_Payment>
-            <active>true</active>
-            <codePool>community</codePool>
-            <depends>
-                <Mage_Payment/>
-            </depends>
-        </Payssion_Payment>
-    </modules>
-</config>
+<?xml version="1.0"?>
+<package>
+	<name>payssion_payment</name>
+	<version>1.0.0</version>
+	<stability>stable</stability>
+	<license uri="http://opensource.org/licenses/OSL-3.0">Open Software License (OSL-3.0)</license>
+	<channel>community</channel>
+	<extends />
+	<summary>Payssion plugin for Magento</summary>
+	<description>Payssion plugin for Magento</description>
+	<notes>Payssion</notes>
+	<authors>
+		<author>
+			<name>Payssion Limited</name>
+			<user>payssion</user>
+			<email>support@payssion.com</email>
+		</author>
+	</authors>
+	<date>2015-09-18</date>
+	<time>04:40:06</time>
+	<contents>
+		<target name="magecommunity">
+			<dir name="Payssion">
+				<dir name="Payment">
+					<dir name="Block">
+						<file name="Form.php" hash="5e089a4e4aa6c28adb6b178660619f62" />
+						<file name="Info.php" hash="518c29592377aa5f6109f4c71fd885fe" />
+						<file name="Redirect.php" hash="e918bd2fbb4d55103d7a3128754cbd15" />
+					</dir>
+					<dir name="Helper">
+						<file name="Data.php" hash="d81a73edc03cebaefdbd581a41ad4b50" />
+					</dir>
+					<dir name="Model">
+						<file name="Notify.php" hash="cea0acb429abd3e4cb14ccd27d7ed83e" />
+						<file name="payssion.php" hash="ffcd82812c00a866a9d7c1d370f639e0" />
+						<file name="payssion7elevenmy.php" hash="6c0d22dca4daabe55eb4562cd4acbdae" />
+						<file name="payssionaffinepgmy.php" hash="3be19506830e3c0fad646d08f8f6e265" />
+						<file name="payssionambmy.php" hash="5b20ae9ced8d9c391733a5a6f859bd79" />
+						<file name="payssionatmvaid.php" hash="5da5812443e6ca7310dd699765c6c967" />
+						<file name="payssionbanamex.php" hash="9f04c953cf9bb9d8a55c591c349547f8" />
+						<file name="payssionbancodobrasil.php" hash="1264c87ae4f3789465837e507bdf837e" />
+						<file name="payssionbancomer.php" hash="af56d639a9bbb0e900ef8da363487b49" />
+						<file name="payssionbanktransferjp.php" hash="a98a4a4469b19034714e5b83c82ce53a" />
+						<file name="payssionboleto.php" hash="c94d649647ca3b2494f01e734e7fdb7d" />
+						<file name="payssionbradesco.php" hash="faec80552eb1d13f4565c197df474a39" />
+						<file name="payssioncaixa.php" hash="d7842a32e64599af217029997ed239ce" />
+						<file name="payssioncashu.php" hash="d594d66bf9fc4d7f990d4fd1b8fdaed3" />
+						<file name="payssioncherrycredits.php" hash="60bf8158d6c6acdbb61e2c76460668d6" />
+						<file name="payssioncimbmy.php" hash="503be76057eac9463708b0fb9a2995bf" />
+						<file name="payssiondragonpayph.php" hash="4dbfd7f53de0deb214e285c32be8a91a" />
+						<file name="payssionenetssg.php" hash="747ad544cee9580d3f4bb50f71372c0a" />
+						<file name="payssionepaymy.php" hash="9ab4746ba7fc297d070929b9dbb67aaa" />
+						<file name="payssionesapaymy.php" hash="5792acbae2e9997c2c4a17f1ec131199" />
+						<file name="payssionfpxmy.php" hash="8d9a84a73b88c24cf2a27edc005d10f3" />
+						<file name="payssionhlbmy.php" hash="c78d29f2e22a8286f1bde6d0f1817596" />
+						<file name="payssionitau.php" hash="088e76ec2f530ff6e46a02212941f9c4" />
+						<file name="payssionkonbinijp.php" hash="dd258c560a9f33a84c66af68fd8fef8e" />
+						<file name="payssionmaybank2umy.php" hash="bf7c0fc9e06e33eda38fbe7a3769abd5" />
+						<file name="payssionmolpay.php" hash="4351979b2c76c2be473cf056c920c15b" />
+						<file name="payssionneosurf.php" hash="47830ef603cf04319906d157f2231b29" />
+						<file name="payssionnganluongvn.php" hash="7b41c1a0bd0ff0a7105951441652b329" />
+						<file name="payssiononecard.php" hash="0c9d8bc5fec5521310f11f5b7e5dd6da" />
+						<file name="payssionopenbucks.php" hash="6ef0b6291541b90e098f5c2d352bdb69" />
+						<file name="payssionoxxo.php" hash="3993a37661eaa600c7eafc5be33e90dc" />
+						<file name="payssionpayeasyjp.php" hash="93975cc451be2799e95ebd67a805ccf5" />
+						<file name="payssionpaysafecard.php" hash="d6bc9012e4e9e6d3132c3b6c48acd183" />
+						<file name="payssionpaysbuyth.php" hash="7f3e495a9706a73a91f8ccf453e4e9eb" />
+						<file name="payssionpoliau.php" hash="ede41e8e032a6b490840bbbfb2711388" />
+						<file name="payssionpolinz.php" hash="d3e97498e57b2b8e628335cd4481cea2" />
+						<file name="payssionqiwi.php" hash="311efa3fa393991c838a8a80aa2bbae9" />
+						<file name="payssionrhbmy.php" hash="d9c131919f31294d5bbd97277ad2bd1a" />
+						<file name="payssionsantandermx.php" hash="59469306163ecd3eb6c7a4b0886b7415" />
+						<file name="payssionsingpostsg.php" hash="ad61ee82886758313d0bf042b46ea2df" />
+						<file name="payssionsofort.php" hash="693962fcb2e4591a5acb8b2956ff9777" />
+						<file name="payssiontrustpay.php" hash="364dfbdb6a1126d3a7bb92c40b296f0c" />
+						<file name="payssionwebcashmy.php" hash="39f77860d78d183903deee90ffb9b34a" />
+						<file name="payssionwebmoneyjp.php" hash="4136fc128a23013369f548b19615b7af" />
+					</dir>
+					<dir name="controllers">
+						<file name="NotifyController.php" hash="2d56e20516cd672201005ebafcc66d22" />
+						<file name="RedirectController.php" hash="00de3fb9bc890f93dd4c9d6e68946bb9" />
+					</dir>
+					<dir name="etc">
+						<file name="config.xml" hash="f0203c2484324ecc3bc1a4e58fb00f2f" />
+						<file name="system.xml" hash="a96eba6f0947a9674a6256ae0977e0ea" />
+					</dir>
+				</dir>
+			</dir>
+		</target>
+		<target name="magedesign">
+			<dir name="adminhtml">
+				<dir name="default">
+					<dir name="default">
+						<dir name="template">
+							<dir name="payssion">
+								<file name="form.phtml" hash="153281791f97b65676f5994da06571d7" />
+								<file name="info.phtml" hash="dda5092bd7cce7371864e1e9827901c4" />
+							</dir>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</target>
+		<target name="magelocale">
+			<dir name="en_US">
+				<file name="Payssion_Payment.csv" hash="0a81b0c9cc0e2045810140d030208518" />
+			</dir>
+		</target>
+		<target name="mageetc">
+			<dir name="modules">
+				<file name="Payssion_Payment.xml" hash="fe3be66e34f7e89b36be8cc8bf0c8587" />
+			</dir>
+		</target>
+	</contents>
+	<compatible />
+	<dependencies>
+		<required>
+			<php>
+				<min>5.3.0</min>
+				<max>6.0.0</max>
+			</php>
+			<package>
+				<name>Mage_Payment</name>
+				<channel>connect.magentocommerce.com/core</channel>
+				<min></min>
+				<max></max>
+			</package>
+		</required>
+	</dependencies>
+</package>
