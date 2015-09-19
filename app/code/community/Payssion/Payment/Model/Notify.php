@@ -33,17 +33,16 @@ class Payssion_Payment_Model_Notify
     }
 
     /**
-     * Get ipn data, send verification to OkPay, run corresponding handler
+     * handle payssion postback
      */
-    public function processIpnRequest(array $request)
+    public function handleNotify(array $request)
     {
         $this->_request   = $request;
-        $this->_debugData = array('ipn' => $request);
-        ksort($this->_debugData['ipn']);
+        $this->_debugData = array('notify' => $request);
+        ksort($this->_debugData['notify']);
 
         try {
             $this->_getOrder();
-			$this->_postBack($this->_debugData);
             $this->_processOrder();
         } catch (Exception $e) {
             $this->_debugData['exception'] = $e->getMessage();
@@ -51,43 +50,34 @@ class Payssion_Payment_Model_Notify
             throw $e;
         }
     }
-
-    /**
-     * Post back to OkPay to check whether this request is a valid one
-     */
-    protected function _postBack($data)
-    {
-		$header = '';
-        $req = 'ok_verify=true';
-		foreach ($data['ipn'] as $key => $value) { 
-			if(get_magic_quotes_gpc() == 1) {
-				$value = urlencode(stripslashes($value)); 
-			} else { 
-				$value = urlencode($value); 
-			}
-			$req .= "&$key=$value";  
-		}
-		// Post back to OKPAY to validate 
-		$header .= "POST /ipn-verify.html HTTP/1.0\r\n"; 
-		$header .= "Host: www.okpay.com\r\n"; 
-		$header .= "Content-Type: application/x-www-form-urlencoded\n"; 
-		$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
-        try {
-			$fp = fsockopen ('www.okpay.com', 80, $errno, $errstr, 30);
-			if (!$fp) {
-				throw new Exception('HTTP/1.1 406 Not Acceptable', 406);
-			}
-		} catch (Exception $e) {
-			$this->_debugData['http_error'] = array('error' => $e->getMessage(), 'code' => $e->getCode());
-            throw $e;
-		}
-		fputs ($fp, $header . $req); 
-		while (!feof($fp)) {
-			$response = fgets ($fp, 1024);
-		}
-		if ($response != 'VERIFIED') {
-			throw new Exception('OkPay IPN postback failure. See ' . self::DEFAULT_LOG_FILE . ' for details.');
-		}
+    
+    public function isValidNotify($data) {
+    	$apiKey = Configuration::get(self::PAYSSION_API_KEY);
+    	$secretKey = Configuration::get(self::PAYSSION_SECRET_KEY);
+    
+    	// Assign payment notification values to local variables
+    	$pm_id = $data['pm_id'];
+    	$amount = $data['amount'];
+    	$currency = $data['currency'];
+    	$track_id = $data['track_id'];
+    	$sub_track_id = $data['sub_track_id'];
+    	$state = $data['state'];
+    
+    	$check_array = array(
+    			$apiKey,
+    			$pm_id,
+    			$amount,
+    			$currency,
+    			$track_id,
+    			$sub_track_id,
+    			$state,
+    			$secretKey
+    	);
+    	$check_msg = implode('|', $check_array);
+    	echo "check_msg=$check_msg";
+    	$check_sig = md5($check_msg);
+    	$notify_sig = $data['notify_sig'];
+    	return ($notify_sig == $check_sig);
     }
 
     /**
@@ -97,7 +87,7 @@ class Payssion_Payment_Model_Notify
     {
         if (empty($this->_order)) {
             // get proper order
-            $id = $this->_request['ok_invoice'];
+            $id = $this->_request['track_id'];
             $this->_order = Mage::getModel('sales/order')->loadByIncrementId($id);
             if (!$this->_order->getId()) {
                 $this->_debugData['exception'] = sprintf('Wrong order ID: "%s".', $id);
@@ -131,16 +121,16 @@ class Payssion_Payment_Model_Notify
     protected function _registerPaymentSuccess()
     {
         $payment = $this->_order->getPayment();
-        $payment->setTransactionId($this->getRequestData('ok_txn_id'))
-            ->setPreparedMessage($this->_createIpnComment(''))
-            ->registerCaptureNotification($this->getRequestData('ok_txn_gross'));
+        $payment->setTransactionId($this->getRequestData('transaction_id'))
+            ->setPreparedMessage($this->_createNotifyComment(''))
+            ->registerCaptureNotification($this->getRequestData('paid'));
         $this->_order->save();
 
         // notify customer
         $invoice = $payment->getCreatedInvoice();
         if ($invoice && !$this->_order->getEmailSent()) {
             $this->_order->sendNewOrderEmail()->addStatusHistoryComment(
-                Mage::helper('okpay')->__('Notified customer about invoice #%s.', $invoice->getIncrementId())
+                Mage::helper('payssion')->__('Notified customer about invoice #%s.', $invoice->getIncrementId())
             )
             ->setIsCustomerNotified(true)
             ->save();
@@ -149,9 +139,9 @@ class Payssion_Payment_Model_Notify
 	
 	
 	
-    protected function _createIpnComment($comment = '', $addToHistory = false)
+    protected function _createNotifyComment($comment = '', $addToHistory = false)
     {
-        $paymentInvoice = $this->getRequestData('ok_invoice');
+        $paymentInvoice = $this->getRequestData('transaction_id');
         $message = Mage::helper('paypal')->__('IPN "%s".', $paymentInvoice);
         if ($comment) {
             $message .= ' ' . $comment;

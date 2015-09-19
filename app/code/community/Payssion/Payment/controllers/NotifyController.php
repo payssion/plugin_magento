@@ -13,7 +13,7 @@ class Payssion_Payment_NotifyController extends Mage_Core_Controller_Front_Actio
 
         try {
             $data = $this->getRequest()->getPost();
-            Mage::getModel('payssion/notify')->processIpnRequest($data);
+            Mage::getModel('payssion/notify')->handleNotify($data);
         } catch (Exception $e) {
             Mage::logException($e);
 			header("HTTP/1.1 406 Not Acceptable");

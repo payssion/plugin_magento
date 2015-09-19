@@ -1,3 +1,11 @@
-<?php
-    echo $this->__('You will be redirected to payssion.com when you place an order.')
-?>
+<?php 
+$_code = $this->getMethodCode();
+$title = Mage::helper('payssion')->getConfigData('title', $code);?>
+
+<fieldset class="form-list">
+    <ul id="payment_form_<?php echo $_code ?>" style="display:none">
+        <li>
+            <?php echo $this->__("You will be redirected to $title (via payssion) when you place an order.") ?> 
+        </li>
+    </ul>
+</fieldset>
