@@ -4,7 +4,7 @@
 class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract {
 
     protected $_code          = 'payssion';
-    protected $_formBlockType = 'paysion/form';
+    protected $_formBlockType = 'payssion/form';
     protected $_infoBlockType = 'payssion/info';
     protected $_order;
     
@@ -54,7 +54,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         }
       
         $params = array(
-            'api_key'           => Mage::getStoreConfig(MagentoCenter_Payssion_Model_Checkout::API_KEY),
+            'api_key'           => Mage::getStoreConfig(Payssion_Payment_Model_Payssion::API_KEY),
         	'pm_id' => $this->pm_id,
         	'track_id'            => $order_id,
             'success_url'     => Mage::getUrl('payssion/redirect/success', array('transaction_id' => $order_id)),
@@ -68,7 +68,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
             'payer_email'        => $email,
         );
         
-        $params['api_sig'] = $this->generateSignature($params, Mage::getStoreConfig(MagentoCenter_Payssion_Model_Checkout::SECRET_KEY));
+        $params['api_sig'] = $this->generateSignature($params, Mage::getStoreConfig(Payssion_Payment_Model_Payssion::SECRET_KEY));
         return $params;
     }
     
