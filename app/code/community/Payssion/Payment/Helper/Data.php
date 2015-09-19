@@ -27,10 +27,10 @@ class Payssion_Payment_Helper_Data extends Mage_Core_Helper_Abstract
 		if ($paymentMethodCode) {
 			$index = strrpos($paymentMethodCode, '_');
 			if ($index) {
-				$icon = strtolower(substr($class_name, $index + 1));
+				$icon = strtolower(substr($paymentMethodCode, $index + 1));
 				return "images/payssion/$icon.png";
 			}
-		}
-		return null;
+			}
+			return null;
 	}
 }

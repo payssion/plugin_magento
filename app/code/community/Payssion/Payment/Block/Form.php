@@ -7,6 +7,7 @@ class Payssion_Payment_Block_Form extends Mage_Payment_Block_Form
     {
         parent::_construct();
         $this->setTemplate('payssion/form.phtml');
+        $this->setMethodTitle('');
     }
     
     
