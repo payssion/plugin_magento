@@ -93,196 +93,196 @@
 				<model>payssion/payssion</model>
 				<title>payssion.com</title>
 			</payssion>
-			<payssion7elevenmy>
+			<payssion_7elevenmy>
 				<active>0</active>
 				<model>payssion/payssion7elevenmy</model>
 				<title>7­eleven Malaysia</title>
-			</payssion7elevenmy>
-			<payssionaffinepgmy>
+			</payssion_7elevenmy>
+			<payssion_affinepgmy>
 				<active>0</active>
 				<model>payssion/payssionaffinepgmy</model>
 				<title>Affin Bank</title>
-			</payssionaffinepgmy>
-			<payssionambmy>
+			</payssion_affinepgmy>
+			<payssion_ambmy>
 				<active>0</active>
 				<model>payssion/payssionambmy</model>
 				<title>Am Online</title>
-			</payssionambmy>
-			<payssionatmvaid>
+			</payssion_ambmy>
+			<payssion_atmvaid>
 				<active>0</active>
 				<model>payssion/payssionboleto</model>
 				<title>Indonesia ATM Network Transfer Virtual Account</title>
-			</payssionatmvaid>
-			<payssionbanamexmx>
+			</payssion_atmvaid>
+			<payssion_banamexmx>
 				<active>0</active>
 				<model>payssion/payssionbanamex</model>
 				<title>Banamex</title>
-			</payssionbanamexmx>
-			<payssionbancodobrasilbr>
+			</payssion_banamexmx>
+			<payssion_bancodobrasilbr>
 				<active>0</active>
 				<model>payssion/payssionbancodobrasil</model>
 				<title>Banco do Brasil</title>
-			</payssionbancodobrasilbr>
-			<payssionbancomerbr>
+			</payssion_bancodobrasilbr>
+			<payssion_bancomerbr>
 				<active>0</active>
 				<model>payssion/payssionbancomer</model>
 				<title>Bancomer(BBVA)</title>
-			</payssionbancomerbr>
-			<payssionboletobr>
+			</payssion_bancomerbr>
+			<payssion_boletobr>
 				<active>0</active>
 				<model>payssion/payssionboleto</model>
 				<title>Boleto</title>
-			</payssionboletobr>
-			<payssionbradescobr>
+			</payssion_boletobr>
+			<payssion_bradescobr>
 				<active>0</active>
 				<model>payssion/payssionbradesco</model>
 				<title>Bradesco</title>
-			</payssionbradescobr>
-			<payssioncaixabr>
+			</payssion_bradescobr>
+			<payssion_caixabr>
 				<active>0</active>
 				<model>payssion/payssioncaixa</model>
 				<title>Caixa Brazil</title>
-			</payssioncaixabr>
-			<payssioncashu>
+			</payssion_caixabr>
+			<payssion_cashu>
 				<active>0</active>
 				<model>payssion/payssioncashu</model>
 				<title>CashU</title>
-			</payssioncashu>
-			<payssioncherrycredits>
+			</payssion_cashu>
+			<payssion_cherrycredits>
 				<active>0</active>
 				<model>payssion/payssioncherrycredits</model>
 				<title>cherrycredits</title>
-			</payssioncherrycredits>
-			<payssioncimbmy>
+			</payssion_cherrycredits>
+			<payssion_cimbmy>
 				<active>0</active>
 				<model>payssion/payssioncimbmy</model>
 				<title>CIMB Clicks</title>
-			</payssioncimbmy>
-			<payssiondragonpayph>
+			</payssion_cimbmy>
+			<payssion_dragonpayph>
 				<active>0</active>
 				<model>payssion/payssiondragonpayph</model>
 				<title>Dragonpay</title>
-			</payssiondragonpayph>
-			<payssionenetssg>
+			</payssion_dragonpayph>
+			<payssion_enetssg>
 				<active>0</active>
 				<model>payssion/payssionenetssg</model>
 				<title>eNETS Debit</title>
-			</payssionenetssg>
-			<payssionepaymy>
+			</payssion_enetssg>
+			<payssion_epaymy>
 				<active>0</active>
 				<model>payssion/payssionepaymy</model>
 				<title>epay</title>
-			</payssionepaymy>
-			<payssionesapaymy>
+			</payssion_epaymy>
+			<payssion_esapaymy>
 				<active>0</active>
 				<model>payssion/payssionesapaymy</model>
 				<title>EsaPAY</title>
-			</payssionesapaymy>
-			<payssionfpxmy>
+			</payssion_esapaymy>
+			<payssion_fpxmy>
 				<active>0</active>
 				<model>payssion/payssionfpxmy</model>
 				<title>MyClear FPX</title>
-			</payssionfpxmy>
-			<payssionhlbmy>
+			</payssion_fpxmy>
+			<payssion_hlbmy>
 				<active>0</active>
 				<model>payssion/payssionhlbmy</model>
 				<title>Hong Leong Connect</title>
-			</payssionhlbmy>
-			<payssionitaubr>
+			</payssion_hlbmy>
+			<payssion_itaubr>
 				<active>0</active>
 				<model>payssion/payssionitau</model>
 				<title>Banco Itaú</title>
-			</payssionitaubr>
-			<payssionmaybank2umy>
+			</payssion_itaubr>
+			<payssion_maybank2umy>
 				<active>0</active>
 				<model>payssion/payssionmaybank2umy</model>
 				<title>Maybank2u</title>
-			</payssionmaybank2umy>
-			<payssionneosurf>
+			</payssion_maybank2umy>
+			<payssion_neosurf>
 				<active>0</active>
 				<model>payssion/payssionneosurf</model>
 				<title>neosurf</title>
-			</payssionneosurf>
-			<payssionnganluongvn>
+			</payssion_neosurf>
+			<payssion_nganluongvn>
 				<active>0</active>
 				<model>payssion/payssionnganluongvn</model>
 				<title>Nganluong</title>
-			</payssionnganluongvn>
-			<payssiononecard>
+			</payssion_nganluongvn>
+			<payssion_onecard>
 				<active>0</active>
 				<model>payssion/payssiononecard</model>
 				<title>onecard</title>
-			</payssiononecard>
-			<payssionopenbucks>
+			</payssion_onecard>
+			<payssion_openbucks>
 				<active>0</active>
 				<model>payssion/payssionopenbucks</model>
 				<title>Pay with Gift Cards using Openbucks</title>
-			</payssionopenbucks>
-			<payssionoxxomx>
+			</payssion_openbucks>
+			<payssion_oxxomx>
 				<active>0</active>
 				<model>payssion/payssionoxxo</model>
 				<title>Oxxo</title>
-			</payssionoxxomx>
-			<payssionpaysafecard>
+			</payssion_oxxomx>
+			<payssion_paysafecard>
 				<active>0</active>
 				<model>payssion/payssionpaysafecard</model>
 				<title>paysafecard</title>
-			</payssionpaysafecard>
-			<payssionpaysbuyth>
+			</payssion_paysafecard>
+			<payssion_paysbuyth>
 				<active>0</active>
 				<model>payssion/payssionpaysbuyth</model>
 				<title>Paysbuy</title>
-			</payssionpaysbuyth>
-			<payssionmolpay>
+			</payssion_paysbuyth>
+			<payssion_molpay>
 				<active>0</active>
 				<model>payssion/payssionmolpay</model>
 				<title>MOLPay</title>
-			</payssionmolpay>
-			<payssionpoliau>
+			</payssion_molpay>
+			<payssion_poliau>
 				<active>0</active>
 				<model>payssion/payssionpoliau</model>
 				<title>Australia bank transfer</title>
-			</payssionpoliau>
-			<payssionpolinz>
+			</payssion_poliau>
+			<payssion_polinz>
 				<active>0</active>
 				<model>payssion/payssionpolinz</model>
 				<title>New Zealand bank transfer</title>
-			</payssionpolinz>
-			<payssionqiwi>
+			</payssion_polinz>
+			<payssion_qiwi>
 				<active>0</active>
 				<model>payssion/payssionqiwi</model>
 				<title>QIWI</title>
-			</payssionqiwi>
-			<payssionrhbmy>
+			</payssion_qiwi>
+			<payssion_rhbmy>
 				<active>0</active>
 				<model>payssion/payssionrhbmy</model>
 				<title>RHB Now</title>
-			</payssionrhbmy>
-			<payssionsantandermx>
+			</payssion_rhbmy>
+			<payssion_santandermx>
 				<active>0</active>
 				<model>payssion/payssionsantandermx</model>
 				<title>Santander Mexico</title>
-			</payssionsantandermx>
-			<payssionsingpostsg>
+			</payssion_santandermx>
+			<payssion_singpostsg>
 				<active>0</active>
 				<model>payssion/payssionsingpostsg</model>
 				<title>SAM by SingPost</title>
-			</payssionsingpostsg>
-			<payssionsofort>
+			</payssion_singpostsg>
+			<payssion_sofort>
 				<active>0</active>
 				<model>payssion/payssionsofort</model>
 				<title>SOFORT</title>
-			</payssionsofort>
-			<payssiontrustpay>
+			</payssion_sofort>
+			<payssion_trustpay>
 				<active>0</active>
 				<model>payssion/payssiontrustpay</model>
 				<title>European Bank Transfer</title>
-			</payssiontrustpay>
-			<payssionwebcashmy>
+			</payssion_trustpay>
+			<payssion_webcashmy>
 				<active>0</active>
 				<model>payssion/payssionwebcashmy</model>
 				<title>Webcash</title>
-			</payssionwebcashmy>
+			</payssion_webcashmy>
 
 		</payment>
 	</default>

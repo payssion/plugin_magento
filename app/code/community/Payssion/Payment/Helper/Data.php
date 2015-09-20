@@ -33,4 +33,12 @@ class Payssion_Payment_Helper_Data extends Mage_Core_Helper_Abstract
 			}
 			return null;
 	}
+	
+	public function getOrder($orderId = null) {
+		if (null === $orderId) {
+			$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+		}
+	
+		return Mage::getModel('sales/order')->loadByIncrementId($orderId);
+	}
 }

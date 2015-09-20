@@ -17,13 +17,14 @@ class Payssion_Payment_RedirectController extends Mage_Core_Controller_Front_Act
     }
 
     public function indexAction() {
+    	$order = Mage::helper('payssion')->getOrder();
         $this->getResponse()
                 ->setHeader('Content-type', 'text/html; charset=utf8')
                 ->setBody($this->getLayout()
                 ->createBlock('payssion/redirect')
+                ->setOrder($order)
                 ->toHtml());
     }
-    
 
     public function successAction() {
             $event = $this->getRequest()->getParams();
@@ -43,7 +44,13 @@ class Payssion_Payment_RedirectController extends Mage_Core_Controller_Front_Act
         $this->_redirect('checkout/cart');
     }
 
-
+    protected function _getOrder() {
+    	return Mage::getModel('sales/order');
+    }
+    
+    protected function _getCheckout() {
+    	return Mage::getSingleton('checkout/session');
+    }
 
 }
 
