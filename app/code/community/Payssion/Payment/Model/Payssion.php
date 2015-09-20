@@ -7,7 +7,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     protected $_infoBlockType = 'payssion/info';
     protected $_order;
     
-    protected $pmId = 'null';
+    protected $pm_id = 'null';
     
     public function __construct()
     {

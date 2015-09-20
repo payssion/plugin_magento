@@ -50,7 +50,13 @@ class Payssion_Payment_Block_Redirect extends Mage_Core_Block_Abstract
      */
     public function getFormData()
     {
-    	return $this->_getOrder()->getPayment()->getMethodInstance()->getFormFields();
+    	//return $this->_getOrder()->getPayment()->getMethodInstance()->getFormFields();
+    	$formData['code'] = $code;
+    	$payment = $this->_getOrder()->getPayment()->getMethodInstance();
+    	$code = $payment->getCode();
+    	$formData = $this->_getOrder()->getPayment()->getMethodInstance()->getFormFields();
+    	$formData['code'] = $code;
+    	return $formData;
     }
     
     /**
