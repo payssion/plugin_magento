@@ -3,20 +3,10 @@
 
 class Payssion_Payment_Block_Redirect extends Mage_Core_Block_Abstract
 {
-	protected function _getOrder() {
-		if ($this->getOrder()) {
-			return $this->getOrder();
-		} else {
-			// log the exception
-			Mage::log("Redirect exception could not load the order:", Zend_Log::DEBUG, "payssion_notification.log", true);
-			return null;
-		}
-	}
-	
     protected function _toHtml()
     {
-    	$paymentObject = $this->_getOrder()->getPayment();
-    	$payssion = $this->_getOrder()->getPayment()->getMethodInstance();
+        $payssion = Mage::getModel('payssion/payssion');
+
         $form = new Varien_Data_Form();
         $form->setAction($payssion->getPayssionUrl())
             ->setId('pay')
