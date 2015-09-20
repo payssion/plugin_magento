@@ -5,15 +5,14 @@ class Payssion_Payment_Block_Redirect extends Mage_Core_Block_Abstract
 {
     protected function _toHtml()
     {
-        $payssion = Mage::getModel('payssion/payssion');
-
         $form = new Varien_Data_Form();
-        $form->setAction($payssion->getPayssionUrl())
+        $form->setAction($this->getFormAction())
             ->setId('pay')
             ->setName('pay')
             ->setMethod('POST')
             ->setUseContainer(true);
-        foreach ($payssion->getPayssionCheckoutFormFields() as $field=>$value) {
+        $formData = $this->getFormData();
+        foreach ($formData as $field=>$value) {
             $form->addField($field, 'hidden', array('name'=>$field, 'value'=>$value));
         }
 
@@ -26,5 +25,41 @@ class Payssion_Payment_Block_Redirect extends Mage_Core_Block_Abstract
         
 
         return $html;
+    }
+    
+    /**
+     * Return order instance
+     *
+     * @return Mage_Sales_Model_Order|null
+     */
+    protected function _getOrder()
+    {
+    	if ($this->getOrder()) {
+    		return $this->getOrder();
+    	} elseif ($orderIncrementId = $this->_getCheckout()->getLastRealOrderId()) {
+    		return Mage::getModel('sales/order')->loadByIncrementId($orderIncrementId);
+    	} else {
+    		return null;
+    	}
+    }
+    
+    /**
+     * Get Form data by using ogone payment api
+     *
+     * @return array
+     */
+    public function getFormData()
+    {
+    	return $this->_getOrder()->getPayment()->getMethodInstance()->getFormFields();
+    }
+    
+    /**
+     * Getting gateway url
+     *
+     * @return string
+     */
+    public function getFormAction()
+    {
+    	return $this->_getOrder()->getPayment()->getMethodInstance()->getUrl();
     }
 }

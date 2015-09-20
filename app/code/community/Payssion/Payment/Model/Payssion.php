@@ -7,15 +7,29 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     protected $_infoBlockType = 'payssion/info';
     protected $_order;
     
-    protected $pm_id = '';
+    protected $pmId = 'null';
     
     public function __construct()
     {
     	parent::__construct();
     	
     	if ($this->pm_id) {
-    		$this->_code = $this->_code . '_' . $this->pm_id;
+    		$this->_code = $this->_code . '_' . str_replace('_', '', $this->pm_id);
     	}
+    }
+    
+    
+    /**
+     * Get order model
+     *
+     * @return Mage_Sales_Model_Order
+     */
+    public function getOrder()
+    {
+    	if (!$this->_order) {
+    		$this->_order = $this->getInfoInstance()->getOrder();
+    	}
+    	return $this->_order;
     }
 
     public function getCheckout() {
@@ -26,7 +40,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         return Mage::getUrl('payssion/redirect', array('_secure' => true));
     }
 
-    public function getPayssionUrl() {
+    public function getUrl() {
     	$sandbox = Mage::helper('payssion')->getConfigData('payssion_sandbox');
     	if (!$sandbox) {
     		$url = 'https://www.payssion.com/payment/create.html';
@@ -41,14 +55,9 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         return Mage::app()->getLocale()->getLocaleCode();
     }
     
-    public function getPayssionCheckoutFormFields() {
-    	
-    	$class_name = get_class($this);
-    	$index = strrpos($class_name, 'Payssion');
-    	$id = strtolower(substr($class_name, $index));
-
-        $order_id = $this->getCheckout()->getLastRealOrderId();
-        $order    = Mage::getModel('sales/order')->loadByIncrementId($order_id);
+    public function getFormFields() {
+        $order = $this->getOrder();
+        $order->getPayment()->getMethodInstance();
         if ($order->getBillingAddress()->getEmail()) {
             $email = $order->getBillingAddress()->getEmail();
         } else {
