@@ -57,7 +57,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
     
     public function getFormFields() {
         $order = $this->getOrder();
-        $order->getPayment()->getMethodInstance();
+        $order_id = $this->getOrder()->getRealOrderId();
         if ($order->getBillingAddress()->getEmail()) {
             $email = $order->getBillingAddress()->getEmail();
         } else {
