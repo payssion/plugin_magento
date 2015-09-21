@@ -4,17 +4,9 @@ Payssion plugin for Magento
 <h3>Getting Started</h3>
 This extension is for Magento
 
-Installation:
-
-1. Install module from Magento Connect Manager (Administrator->System->Magento Connect->Magento Connect Manager)
-
-2. Enabled and enter your Wallet ID or Email/Phone linked to your wallet in setting module (Administrator->System->Configuration->Payment Methods)
-
-3. That's all. Now your shop can receive OKPAY payments!
-
 <h4>Installation</h4>
 
-Copy over _<b>app</b>_, _<b>skin</b>_ folders to your Magento root.
+Copy over _<b>app</b>_, _<b>skin</b>_ , _<b>package.xml</b>_ folders to your Magento root.
 
 <h4>Setup</h4>
 
