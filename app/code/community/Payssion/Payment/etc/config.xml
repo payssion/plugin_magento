@@ -281,7 +281,7 @@
 			<payssion_giropayde>
 				<active>0</active>
 				<model>payssion/payssiongiropayde</model>
-				<title>European Bank Transfer</title>
+				<title>Giropay</title>
 			</payssion_giropayde>
 			<payssion_idealnl>
 				<active>0</active>
