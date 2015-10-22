@@ -65,6 +65,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         }
       
         $params = array(
+        	'source' => 'magento',
             'api_key'           => Mage::helper('payssion')->getConfigData('payssion_apikey'),
         	'pm_id' => $this->pm_id,
         	'track_id'            => $order_id,
