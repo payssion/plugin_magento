@@ -161,7 +161,7 @@
 						</active>
 					</fields>
 				</payssion_bancodobrasilbr>
-				<payssion_bancomerbr>
+				<payssion_bancomermx>
 					<label>Bancomer(BBVA) (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -179,7 +179,7 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssion_bancomerbr>
+				</payssion_bancomermx>
 				<payssion_boletobr>
 					<label>Boleto (via Payssion)</label>
 					<frontend_type>text</frontend_type>
