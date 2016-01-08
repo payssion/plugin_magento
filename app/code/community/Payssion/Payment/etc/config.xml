@@ -110,37 +110,37 @@
 			</payssion_ambmy>
 			<payssion_atmvaid>
 				<active>0</active>
-				<model>payssion/payssionboleto</model>
+				<model>payssion/payssionatmvaid</model>
 				<title>Indonesia ATM Network Transfer Virtual Account</title>
 			</payssion_atmvaid>
 			<payssion_banamexmx>
 				<active>0</active>
-				<model>payssion/payssionbanamex</model>
+				<model>payssion/payssionbanamexmx</model>
 				<title>Banamex</title>
 			</payssion_banamexmx>
 			<payssion_bancodobrasilbr>
 				<active>0</active>
-				<model>payssion/payssionbancodobrasil</model>
+				<model>payssion/payssionbancodobrasilbr</model>
 				<title>Banco do Brasil</title>
 			</payssion_bancodobrasilbr>
-			<payssion_bancomerbr>
+			<payssion_bancomermx>
 				<active>0</active>
-				<model>payssion/payssionbancomer</model>
+				<model>payssion/payssionbancomermx</model>
 				<title>Bancomer(BBVA)</title>
-			</payssion_bancomerbr>
+			</payssion_bancomermx>
 			<payssion_boletobr>
 				<active>0</active>
-				<model>payssion/payssionboleto</model>
+				<model>payssion/payssionboletobr</model>
 				<title>Boleto</title>
 			</payssion_boletobr>
 			<payssion_bradescobr>
 				<active>0</active>
-				<model>payssion/payssionbradesco</model>
+				<model>payssion/payssionbradescobr</model>
 				<title>Bradesco</title>
 			</payssion_bradescobr>
 			<payssion_caixabr>
 				<active>0</active>
-				<model>payssion/payssioncaixa</model>
+				<model>payssion/payssioncaixabr</model>
 				<title>Caixa Brazil</title>
 			</payssion_caixabr>
 			<payssion_cashu>
@@ -190,7 +190,7 @@
 			</payssion_hlbmy>
 			<payssion_itaubr>
 				<active>0</active>
-				<model>payssion/payssionitau</model>
+				<model>payssion/payssionitaubr</model>
 				<title>Banco Itaú</title>
 			</payssion_itaubr>
 			<payssion_maybank2umy>
@@ -220,7 +220,7 @@
 			</payssion_openbucks>
 			<payssion_oxxomx>
 				<active>0</active>
-				<model>payssion/payssionoxxo</model>
+				<model>payssion/payssionoxxomx</model>
 				<title>Oxxo</title>
 			</payssion_oxxomx>
 			<payssion_paysafecard>
