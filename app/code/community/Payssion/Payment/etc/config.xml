@@ -253,6 +253,11 @@
 				<model>payssion/payssionqiwi</model>
 				<title>QIWI</title>
 			</payssion_qiwi>
+			<payssion_yandexmoney>
+				<active>0</active>
+				<model>payssion/payssionyandexmoney</model>
+				<title>Yandex.Money</title>
+			</payssion_yandexmoney>
 			<payssion_rhbmy>
 				<active>0</active>
 				<model>payssion/payssionrhbmy</model>
@@ -293,7 +298,6 @@
 				<model>payssion/payssionwebcashmy</model>
 				<title>Webcash</title>
 			</payssion_webcashmy>
-
 		</payment>
 	</default>
 </config>
