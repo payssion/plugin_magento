@@ -30,8 +30,8 @@ class Payssion_Payment_Helper_Data extends Mage_Core_Helper_Abstract
 				$icon = strtolower(substr($paymentMethodCode, $index + 1));
 				return "images/payssion/$icon.png";
 			}
-			}
-			return null;
+		}
+		return null;
 	}
 	
 	public function getOrder($orderId = null) {

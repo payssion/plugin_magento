@@ -253,11 +253,11 @@
 				<model>payssion/payssionqiwi</model>
 				<title>QIWI</title>
 			</payssion_qiwi>
-			<payssion_yandexmoney>
+			<payssion_yamoney>
 				<active>0</active>
-				<model>payssion/payssionyandexmoney</model>
+				<model>payssion/payssionyamoney</model>
 				<title>Yandex.Money</title>
-			</payssion_yandexmoney>
+			</payssion_yamoney>
 			<payssion_rhbmy>
 				<active>0</active>
 				<model>payssion/payssionrhbmy</model>

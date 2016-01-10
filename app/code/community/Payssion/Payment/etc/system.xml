@@ -655,7 +655,7 @@
 						</active>
 					</fields>
 				</payssion_qiwi>
-			    <payssion_yandexmoney>
+			    <payssion_yamoney>
 					<label>Yandex.Money (via Payssion)</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>1</sort_order>
@@ -673,7 +673,7 @@
 							<show_in_store>1</show_in_store>
 						</active>
 					</fields>
-				</payssion_yandexmoney>
+				</payssion_yamoney>
 				<payssion_rhbmy>
 					<label>RHB Now (via Payssion)</label>
 					<frontend_type>text</frontend_type>
