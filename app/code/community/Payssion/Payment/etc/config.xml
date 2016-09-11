@@ -258,6 +258,11 @@
 				<model>payssion/payssionyamoney</model>
 				<title>Yandex.Money</title>
 			</payssion_yamoney>
+			<payssion_webmoney>
+				<active>0</active>
+				<model>payssion/payssionwebmoney</model>
+				<title>WebMoney</title>
+			</payssion_webmoney>
 			<payssion_rhbmy>
 				<active>0</active>
 				<model>payssion/payssionrhbmy</model>
