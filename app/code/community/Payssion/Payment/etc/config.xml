@@ -88,11 +88,6 @@
 
 	<default>
 		<payment>
-			<payssion>
-				<active>0</active>
-				<model>payssion/payssion</model>
-				<title>payssion.com</title>
-			</payssion>
 			<payssion_7elevenmy>
 				<active>0</active>
 				<model>payssion/payssion7elevenmy</model>
