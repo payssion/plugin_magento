@@ -138,6 +138,11 @@
 				<model>payssion/payssioncaixabr</model>
 				<title>Caixa Brazil</title>
 			</payssion_caixabr>
+		    <payssion_webpaycl>
+				<active>0</active>
+				<model>payssion/payssionwebpaycl</model>
+				<title>webpay Chile</title>
+			</payssion_webpaycl>
 			<payssion_cashu>
 				<active>0</active>
 				<model>payssion/payssioncashu</model>
