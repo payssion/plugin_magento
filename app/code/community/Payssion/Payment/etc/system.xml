@@ -1498,7 +1498,7 @@
 					</fields>
 				</payssion_epaymy>
 				<payssion_7elevenmy>
-					<label>7­eleven Malaysia (via Payssion) - Malaysia</label>
+					<label>7­eleven (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>559</sort_order>
 					<show_in_default>1</show_in_default>
@@ -2194,7 +2194,7 @@
 					</fields>
 				</payssion_itaubr>
 				<payssion_caixabr>
-					<label>Caixa Brazil (via Payssion) - Brazil</label>
+					<label>Caixa (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>623</sort_order>
 					<show_in_default>1</show_in_default>
@@ -2484,7 +2484,7 @@
 					</fields>
 				</payssion_banamexmx>
 				<payssion_santandermx>
-					<label>Santander Mexico (via Payssion) - Mexico</label>
+					<label>Santander (via Payssion) - Mexico</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>633</sort_order>
 					<show_in_default>1</show_in_default>
