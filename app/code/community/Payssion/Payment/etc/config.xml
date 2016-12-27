@@ -88,6 +88,30 @@
 
 	<default>
 		<payment>
+		    <payssion_alipaycn>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionalipaycn</model>
+				<title>Alipay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>CN</specificcountry>
+			</payssion_alipaycn>>
+		    <payssion_tenpaycn>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiontenpaycn></model>
+				<title>Tenpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>CN</specificcountry>
+			</payssion_tenpaycn>>
+			<payssion_unionpaycn>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionunionpaycn></model>
+				<title>Unionpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>CN</specificcountry>
+			</payssion_unionpaycn>>
 		    <payssion_sofort>
 		        <group>payssion</group>
 				<active>0</active>
