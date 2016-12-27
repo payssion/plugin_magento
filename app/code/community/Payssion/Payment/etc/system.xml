@@ -6,7 +6,7 @@
 				<payssion translate="label" module="payssion">
 					<label>Payssion Settings</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>0</sort_order>
+					<sort_order>500</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -47,10 +47,184 @@
 						</payssion_sandbox>
 					</fields>
 				</payssion>
-				<payssion_sofort>
-					<label>SOFORT (via Payssion)</label>
+				<payssion_alipaycn>
+					<label>Alipay (via Payssion) - China</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>501</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_alipaycn/sort_order</config_path>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_alipaycn/title</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+						<allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/payssion_alipaycn/allowspecific</config_path>
+                            <sort_order>6</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/payssion_alipaycn/specificcountry</config_path>
+                            <sort_order>7</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+					</fields>
+				</payssion_alipaycn>
+				<payssion_tenpaycn>
+					<label>Tenpay (via Payssion) - China</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>502</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_tenpaycn/sort_order</config_path>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_tenpaycn/title</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+						<allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/payssion_tenpaycn/allowspecific</config_path>
+                            <sort_order>6</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/payssion_tenpaycn/specificcountry</config_path>
+                            <sort_order>7</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+					</fields>
+				</payssion_tenpaycn>
+				<payssion_unionpaycn>
+					<label>Unionpay (via Payssion) - China</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>503</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<active translate="label">
+							<label>Enabled</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</active>
+						<sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_unionpaycn/sort_order</config_path>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/payssion_unionpaycn/title</config_path>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+						<allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/payssion_unionpaycn/allowspecific</config_path>
+                            <sort_order>6</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/payssion_unionpaycn/specificcountry</config_path>
+                            <sort_order>7</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+					</fields>
+				</payssion_unionpaycn>
+				<payssion_sofort>
+					<label>SOFORT Banking (via Payssion) - Europe</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>510</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -106,9 +280,9 @@
 					</fields>
 				</payssion_sofort>
 				<payssion_giropayde>
-					<label>Giropay (via Payssion)</label>
+					<label>Giropay (via Payssion) - Germany</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>511</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -164,9 +338,9 @@
 					</fields>
 				</payssion_giropayde>
 				<payssion_idealnl>
-					<label>iDEAL (via Payssion)</label>
+					<label>iDEAL (via Payssion) - Netherlands</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>512</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -222,9 +396,9 @@
 					</fields>
 				</payssion_idealnl>
 				<payssion_epsat>
-					<label>EPS Online-Überweisung (via Payssion)</label>
+					<label>EPS Online-Überweisung (via Payssion) - Austria</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>513</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -280,9 +454,9 @@
 					</fields>
 				</payssion_epsat>
 				<payssion_multibancopt>
-					<label>Multibanco (via Payssion)</label>
+					<label>Multibanco (via Payssion) - Portugal</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>514</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -338,9 +512,9 @@
 					</fields>
 				</payssion_multibancopt>
 				<payssion_p24pl>
-					<label>Przelewy24 (via Payssion)</label>
+					<label>Przelewy24 (via Payssion) - Poland</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>520</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -396,9 +570,9 @@
 					</fields>
 				</payssion_p24pl>
 				<payssion_dotpaypl>
-					<label>Dotpay (via Payssion)</label>
+					<label>Dotpay (via Payssion) - Poland</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>521</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -454,9 +628,9 @@
 					</fields>
 				</payssion_dotpaypl>
 				<payssion_trustpay>
-					<label>European Bank Transfer (via Payssion)</label>
+					<label>European Bank Transfer (via Payssion) - Europe</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>522</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -512,9 +686,9 @@
 					</fields>
 				</payssion_trustpay>
 				<payssion_poliau>
-					<label>Australia bank transfer (via Payssion)</label>
+					<label>POLi bank transfer (via Payssion) - Australia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>530</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -570,9 +744,9 @@
 					</fields>
 				</payssion_poliau>
 				<payssion_polinz>
-					<label>New Zealand bank transfer (via Payssion)</label>
+					<label>POLi bank transfer (via Payssion) - New Zealand</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>531</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -628,9 +802,9 @@
 					</fields>
 				</payssion_polinz>
 				<payssion_qiwi>
-					<label>QIWI (via Payssion)</label>
+					<label>QIWI (via Payssion) - CIS, mostly Russia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>540</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -686,9 +860,9 @@
 					</fields>
 				</payssion_qiwi>
 			    <payssion_yamoney>
-					<label>Yandex.Money (via Payssion)</label>
+					<label>Yandex.Money (via Payssion) - CIS, mostly Russia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>541</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -744,9 +918,9 @@
 					</fields>
 				</payssion_yamoney>
 				<payssion_webmoney>
-					<label>WebMoney (via Payssion)</label>
+					<label>WebMoney (via Payssion) - CIS, mostly Russia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>542</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -802,9 +976,9 @@
 					</fields>
 				</payssion_webmoney>
 				<payssion_maybank2umy>
-					<label>Maybank2u (via Payssion)</label>
+					<label>Maybank2u (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>550</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -860,9 +1034,9 @@
 					</fields>
 				</payssion_maybank2umy>
 				<payssion_fpxmy>
-					<label>MyClear FPX (via Payssion)</label>
+					<label>MyClear FPX (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>551</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -918,9 +1092,9 @@
 					</fields>
 				</payssion_fpxmy>
 				<payssion_rhbmy>
-					<label>RHB Now (via Payssion)</label>
+					<label>RHB Now (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>552</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -976,9 +1150,9 @@
 					</fields>
 				</payssion_rhbmy>
 				<payssion_hlbmy>
-					<label>Hong Leong Connect (via Payssion)</label>
+					<label>Hong Leong Connect (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>553</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1034,9 +1208,9 @@
 					</fields>
 				</payssion_hlbmy>
 				<payssion_cimbmy>
-					<label>CIMB (via Payssion)</label>
+					<label>CIMB (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>554</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1092,9 +1266,9 @@
 					</fields>
 				</payssion_cimbmy>
 				<payssion_ambmy>
-					<label>Am Online (via Payssion)</label>
+					<label>Am Online (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>555</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1150,9 +1324,9 @@
 					</fields>
 				</payssion_ambmy>
 				<payssion_molpay>
-					<label>MOLPay (via Payssion)</label>
+					<label>MOLPay (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>556</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1208,9 +1382,9 @@
 					</fields>
 				</payssion_molpay>
 				<payssion_webcashmy>
-					<label>Webcash (via Payssion)</label>
+					<label>Webcash (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>557</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1266,9 +1440,9 @@
 					</fields>
 				</payssion_webcashmy>
 				<payssion_epaymy>
-					<label>epay (via Payssion)</label>
+					<label>epay (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>558</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1324,9 +1498,9 @@
 					</fields>
 				</payssion_epaymy>
 				<payssion_7elevenmy>
-					<label>7­eleven Malaysia (via Payssion)</label>
+					<label>7­eleven Malaysia (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>559</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1382,9 +1556,9 @@
 					</fields>
 				</payssion_7elevenmy>
 				<payssion_esapaymy>
-					<label>ESAPAY (via Payssion)</label>
+					<label>ESAPAY (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>560</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1440,9 +1614,9 @@
 					</fields>
 				</payssion_esapaymy>
 				<payssion_affinepgmy>
-					<label>Affin Bank (via Payssion)</label>
+					<label>Affin Bank (via Payssion) - Malaysia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>561</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1498,9 +1672,9 @@
 					</fields>
 				</payssion_affinepgmy>
 				<payssion_enetssg>
-					<label>eNETS Debit (via Payssion)</label>
+					<label>eNETS Debit (via Payssion) - Singapore</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>570</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1556,9 +1730,9 @@
 					</fields>
 				</payssion_enetssg>
 				<payssion_singpostsg>
-					<label>SAM by SingPost (via Payssion)</label>
+					<label>SAM by SingPost (via Payssion) - Singapore</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>571</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1614,9 +1788,9 @@
 					</fields>
 				</payssion_singpostsg>
 				<payssion_dragonpayph>
-					<label>Dragonpay (via Payssion)</label>
+					<label>Dragonpay (via Payssion) - Philippines</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>580</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1672,9 +1846,9 @@
 					</fields>
 				</payssion_dragonpayph>
 				<payssion_atmvaid>
-					<label>Indonesia ATM Transfer (via Payssion)</label>
+					<label>ATM Transfer (via Payssion) - Indonesia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>590</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1730,9 +1904,9 @@
 					</fields>
 				</payssion_atmvaid>
 				<payssion_paysbuyth>
-					<label>Paysbuy (via Payssion)</label>
+					<label>Paysbuy (via Payssion) - Thailand</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>600</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1788,9 +1962,9 @@
 					</fields>
 				</payssion_paysbuyth>
 				<payssion_nganluongvn>
-					<label>Nganluong (via Payssion)</label>
+					<label>Nganluong (via Payssion) - Vietnam</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>610</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1846,9 +2020,9 @@
 					</fields>
 				</payssion_nganluongvn>
 				<payssion_boletobr>
-					<label>Boleto (via Payssion)</label>
+					<label>Boleto (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>620</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1904,9 +2078,9 @@
 					</fields>
 				</payssion_boletobr>
 				<payssion_bradescobr>
-					<label>Bradesco (via Payssion)</label>
+					<label>Bradesco (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>621</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -1962,9 +2136,9 @@
 					</fields>
 				</payssion_bradescobr>
 				<payssion_itaubr>
-					<label>Banco Itaú (via Payssion)</label>
+					<label>Banco Itaú (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>622</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2020,9 +2194,9 @@
 					</fields>
 				</payssion_itaubr>
 				<payssion_caixabr>
-					<label>Caixa Brazil (via Payssion)</label>
+					<label>Caixa Brazil (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>623</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2078,9 +2252,9 @@
 					</fields>
 				</payssion_caixabr>
 				<payssion_bancodobrasilbr>
-					<label>Banco do Brasil (via Payssion)</label>
+					<label>Banco do Brasil (via Payssion) - Brazil</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>624</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2136,9 +2310,9 @@
 					</fields>
 				</payssion_bancodobrasilbr>
 				<payssion_bancomermx>
-					<label>Bancomer(BBVA) (via Payssion)</label>
+					<label>Bancomer(BBVA) (via Payssion) - Mexico</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>630</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2194,9 +2368,9 @@
 					</fields>
 				</payssion_bancomermx>
 				<payssion_oxxomx>
-					<label>Oxxo (via Payssion)</label>
+					<label>Oxxo (via Payssion) - Mexico</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>631</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2252,9 +2426,9 @@
 					</fields>
 				</payssion_oxxomx>
 				<payssion_banamexmx>
-					<label>Banamex (via Payssion)</label>
+					<label>Banamex (via Payssion) - Mexico</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>632</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2310,9 +2484,9 @@
 					</fields>
 				</payssion_banamexmx>
 				<payssion_santandermx>
-					<label>Santander Mexico (via Payssion)</label>
+					<label>Santander Mexico (via Payssion) - Mexico</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>633</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2368,9 +2542,9 @@
 					</fields>
 				</payssion_santandermx>
 				<payssion_webpaycl>
-					<label>webpay Chile (via Payssion)</label>
+					<label>webpay (via Payssion) - Chile</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>640</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2426,9 +2600,9 @@
 					</fields>
 				</payssion_webpaycl>
 				<payssion_bancochilecl>
-					<label>Banco de Chile (via Payssion)</label>
+					<label>Banco de Chile (via Payssion) - Chile</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>641</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2484,9 +2658,9 @@
 					</fields>
 				</payssion_bancochilecl>
 				<payssion_paysafecard>
-					<label>paysafecard (via Payssion)</label>
+					<label>paysafecard (via Payssion) - International, mostly Europe</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>650</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2542,9 +2716,9 @@
 					</fields>
 				</payssion_paysafecard>
 				<payssion_cashu>
-					<label>CashU (via Payssion)</label>
+					<label>CashU (via Payssion) - MENA</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>660</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2600,9 +2774,9 @@
 					</fields>
 				</payssion_cashu>
 				<payssion_onecard>
-					<label>onecard (via Payssion)</label>
+					<label>OneCard (via Payssion) - MENA</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>661</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2658,9 +2832,9 @@
 					</fields>
 				</payssion_onecard>
 				<payssion_cherrycredits>
-					<label>cherrycredits (via Payssion)</label>
+					<label>Cherry Credits (via Payssion) - Southeast Asia</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>670</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2716,9 +2890,9 @@
 					</fields>
 				</payssion_cherrycredits>
 				<payssion_neosurf>
-					<label>neosurf (via Payssion)</label>
+					<label>Neosurf (via Payssion) - France</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>680</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
@@ -2774,9 +2948,9 @@
 					</fields>
 				</payssion_neosurf>
 				<payssion_openbucks>
-					<label>Openbucks (via Payssion)</label>
+					<label>Openbucks (via Payssion) - USA</label>
 					<frontend_type>text</frontend_type>
-					<sort_order>1</sort_order>
+					<sort_order>690</sort_order>
 					<show_in_default>1</show_in_default>
 					<show_in_website>1</show_in_website>
 					<show_in_store>0</show_in_store>
