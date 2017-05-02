@@ -45,6 +45,7 @@ class Payssion_Payment_Model_Notify
         	try {
         		$this->_getOrder();
         		$this->_processOrder();
+        		echo 'OK';
         	} catch (Exception $e) {
         		$this->_debugData['exception'] = $e->getMessage();
         		$this->_debug();
@@ -53,6 +54,7 @@ class Payssion_Payment_Model_Notify
         } else {
         	$this->_debugData['exception'] = 'payssion signature is invalid' . print_r($request, true);
         	$this->_debug();
+        	echo 'Failed to verify signature';
         }
     }
     
@@ -112,12 +114,29 @@ class Payssion_Payment_Model_Notify
     protected function _processOrder()
     {
         try {
-            $this->_registerPaymentSuccess();
+            $this->_updatePaymentStatus();
         } catch (Mage_Core_Exception $e) {
             $comment = $this->_createIpnComment(Mage::helper('payssion')->__('Note: %s', $e->getMessage()), true);
             $comment->save();
             throw $e;
         }
+    }
+    
+    protected function _updatePaymentStatus()
+    {
+    	$state = $this->getRequestData('state');
+    	switch ($state) {
+    		case 'completed':
+    			$this->_registerPaymentSuccess();
+    			break;
+    		case 'cancelled_by_user':
+    		case 'cancelled':
+    			$this->_registerPaymentCancelled();
+    			break;
+    			break;
+    		default:
+    			break;
+    	}
     }
 
     /**
@@ -142,7 +161,26 @@ class Payssion_Payment_Model_Notify
         }
     }
 	
-	
+
+    /**
+     * Process cancelled payment
+     */
+    protected function _registerPaymentCancelled()
+    {
+        $comment = Mage::helper('payssion')->__('The transaction has been canceled.');
+        $payment = $this->_order->getPayment();
+        $payment->setTransactionId($this->getRequestData('transaction_id'))
+            ->setPreparedMessage($comment)
+            ->setIsTransactionApproved(true)
+            ->setIsTransactionClosed(true)
+            ->save();
+        $payment->addTransaction(Mage_Sales_Model_Order_Payment_Transaction::TYPE_ORDER, null, false, $comment)
+            ->save();
+        $payment->getOrder()
+            ->sendOrderUpdateEmail(true, $comment)
+            ->cancel()
+            ->save();
+    }
 	
     protected function _createNotifyComment($comment = '', $addToHistory = false)
     {
