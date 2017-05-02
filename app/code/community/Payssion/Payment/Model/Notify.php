@@ -41,19 +41,24 @@ class Payssion_Payment_Model_Notify
         $this->_debugData = array('notify' => $request);
         ksort($this->_debugData['notify']);
 
-        try {
-            $this->_getOrder();
-            $this->_processOrder();
-        } catch (Exception $e) {
-            $this->_debugData['exception'] = $e->getMessage();
-            $this->_debug();
-            throw $e;
+        if ($this->isValidNotify($request)) {
+        	try {
+        		$this->_getOrder();
+        		$this->_processOrder();
+        	} catch (Exception $e) {
+        		$this->_debugData['exception'] = $e->getMessage();
+        		$this->_debug();
+        		throw $e;
+        	}
+        } else {
+        	$this->_debugData['exception'] = 'payssion signature is invalid' . print_r($request, true);
+        	$this->_debug();
         }
     }
     
     public function isValidNotify($data) {
-    	$apiKey = Configuration::get(self::PAYSSION_API_KEY);
-    	$secretKey = Configuration::get(self::PAYSSION_SECRET_KEY);
+    	$apiKey = Mage::helper('payssion')->getConfigData('payssion_apikey');
+    	$secretKey = Mage::helper('payssion')->getConfigData('payssion_secretkey');
     
     	// Assign payment notification values to local variables
     	$pm_id = $data['pm_id'];
@@ -109,7 +114,7 @@ class Payssion_Payment_Model_Notify
         try {
             $this->_registerPaymentSuccess();
         } catch (Mage_Core_Exception $e) {
-            $comment = $this->_createIpnComment(Mage::helper('paypal')->__('Note: %s', $e->getMessage()), true);
+            $comment = $this->_createIpnComment(Mage::helper('payssion')->__('Note: %s', $e->getMessage()), true);
             $comment->save();
             throw $e;
         }
@@ -142,7 +147,7 @@ class Payssion_Payment_Model_Notify
     protected function _createNotifyComment($comment = '', $addToHistory = false)
     {
         $paymentInvoice = $this->getRequestData('transaction_id');
-        $message = Mage::helper('paypal')->__('IPN "%s".', $paymentInvoice);
+        $message = Mage::helper('payssion')->__('IPN "%s".', $paymentInvoice);
         if ($comment) {
             $message .= ' ' . $comment;
         }
