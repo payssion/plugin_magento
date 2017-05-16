@@ -99,7 +99,7 @@
 		    <payssion_tenpaycn>
 		        <group>payssion</group>
 				<active>0</active>
-				<model>payssion/payssiontenpaycn></model>
+				<model>payssion/payssiontenpaycn</model>
 				<title>Tenpay</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>CN</specificcountry>
@@ -107,7 +107,7 @@
 			<payssion_unionpaycn>
 		        <group>payssion</group>
 				<active>0</active>
-				<model>payssion/payssionunionpaycn></model>
+				<model>payssion/payssionunionpaycn</model>
 				<title>Unionpay</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>CN</specificcountry>
