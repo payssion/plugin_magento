@@ -136,6 +136,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>NL</specificcountry>
 			</payssion_idealnl>
+			<payssion_bancontactbe>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionbancontactbe</model>
+				<title>Bancontact</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>BE</specificcountry>
+			</payssion_bancontactbe>
 			<payssion_epsat>
 			    <group>payssion</group>
 				<active>0</active>
