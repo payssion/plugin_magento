@@ -81,7 +81,6 @@ class Payssion_Payment_Model_Notify
     			$secretKey
     	);
     	$check_msg = implode('|', $check_array);
-    	echo "check_msg=$check_msg";
     	$check_sig = md5($check_msg);
     	$notify_sig = $data['notify_sig'];
     	return ($notify_sig == $check_sig);
@@ -148,6 +147,8 @@ class Payssion_Payment_Model_Notify
         $payment->setTransactionId($this->getRequestData('transaction_id'))
             ->setPreparedMessage($this->_createNotifyComment(''))
             ->registerCaptureNotification($this->getRequestData('paid'));
+
+        $this->_order->setState(Mage_Sales_Model_Order::STATE_PROCESSING, true);
         $this->_order->save();
 
         // notify customer
