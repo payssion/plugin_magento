@@ -143,6 +143,11 @@ class Payssion_Payment_Model_Notify
      */
     protected function _registerPaymentSuccess()
     {
+        $state = $this->_order->getState();
+    	if (Mage_Sales_Model_Order::STATE_PROCESSING == $state) {
+    		return ;
+    	}
+    	
         $payment = $this->_order->getPayment();
         $payment->setTransactionId($this->getRequestData('transaction_id'))
             ->setPreparedMessage($this->_createNotifyComment(''))
@@ -150,15 +155,16 @@ class Payssion_Payment_Model_Notify
 
         $this->_order->setState(Mage_Sales_Model_Order::STATE_PROCESSING, true);
         $this->_order->save();
-
-        // notify customer
-        $invoice = $payment->getCreatedInvoice();
-        if ($invoice && !$this->_order->getEmailSent()) {
-            $this->_order->sendNewOrderEmail()->addStatusHistoryComment(
-                Mage::helper('payssion')->__('Notified customer about invoice #%s.', $invoice->getIncrementId())
-            )
-            ->setIsCustomerNotified(true)
-            ->save();
+        $this->_order->sendNewOrderEmail()->addStatusHistoryComment(
+        		Mage::helper('payssion')->__('Notified customer about order #%s.', $this->_order->getIncrementId())
+        		)
+        		->setIsCustomerNotified(true)
+        		->save();
+        
+        if ($this->_order->canInvoice()) {
+        	$invoice = $this->_order->prepareInvoice();
+        	$invoice->register()->capture();
+        	$this->_order->addRelatedObject($invoice);
         }
     }
 	
