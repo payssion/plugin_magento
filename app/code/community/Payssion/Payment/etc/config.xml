@@ -155,7 +155,7 @@
 			<payssion_multibancopt>
 			    <group>payssion</group>
 				<active>0</active>
-				<model>payssion/payssionmultibancoptt</model>
+				<model>payssion/payssionmultibancopt</model>
 				<title>Multibanco</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>PT</specificcountry>
