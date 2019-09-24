@@ -309,14 +309,6 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>MY</specificcountry>
 			</payssion_7elevenmy>
-			<payssion_esapaymy>
-			    <group>payssion</group>
-				<active>0</active>
-				<model>payssion/payssionesapay</model>
-				<title>ESAPAY Malaysia</title>
-				<allowspecific>1</allowspecific>
-                <specificcountry>MY</specificcountry>
-			</payssion_esapaymy>
 			<payssion_enetssg>
 			    <group>payssion</group>
 				<active>0</active>
