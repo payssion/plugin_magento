@@ -341,14 +341,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>ID</specificcountry>
 			</payssion_atmvaid>
-			<payssion_paysbuyth>
+			<payssion_ebankingth>
 			    <group>payssion</group>
 				<active>0</active>
-				<model>payssion/payssionpaysbuyth</model>
-				<title>Paysbuy</title>
+				<model>payssion/payssionebankingth</model>
+				<title>Thailand online banking</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>TH</specificcountry>
-			</payssion_paysbuyth>
+			</payssion_ebankingth>
 			<payssion_nganluongvn>
 			    <group>payssion</group>
 				<active>0</active>

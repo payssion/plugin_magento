@@ -1961,8 +1961,8 @@
                         </specificcountry>
 					</fields>
 				</payssion_atmvaid>
-				<payssion_paysbuyth>
-					<label>Paysbuy (via Payssion) - Thailand</label>
+				<payssion_ebankingth>
+					<label>Online Banking - Thailand</label>
 					<frontend_type>text</frontend_type>
 					<sort_order>600</sort_order>
 					<show_in_default>1</show_in_default>
@@ -1981,7 +1981,7 @@
 						<sort_order translate="label">
                             <label>Sort Order</label>
                             <frontend_type>text</frontend_type>
-                            <config_path>payment/payssion_paysbuyth/sort_order</config_path>
+                            <config_path>payment/payssion_ebankingth/sort_order</config_path>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1990,7 +1990,7 @@
                         <title translate="label">
                             <label>Title</label>
                             <frontend_type>text</frontend_type>
-                            <config_path>payment/payssion_paysbuyth/title</config_path>
+                            <config_path>payment/payssion_ebankingth/title</config_path>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -1999,7 +1999,7 @@
 						<allowspecific translate="label">
                             <label>Payment from Applicable Countries</label>
                             <frontend_type>allowspecific</frontend_type>
-                            <config_path>payment/payssion_paysbuyth/allowspecific</config_path>
+                            <config_path>payment/payssion_ebankingthth/allowspecific</config_path>
                             <sort_order>6</sort_order>
                             <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
                             <show_in_default>1</show_in_default>
@@ -2009,7 +2009,7 @@
                         <specificcountry translate="label">
                             <label>Payment from Specific Countries</label>
                             <frontend_type>multiselect</frontend_type>
-                            <config_path>payment/payssion_paysbuyth/specificcountry</config_path>
+                            <config_path>payment/payssion_ebankingth/specificcountry</config_path>
                             <sort_order>7</sort_order>
                             <source_model>adminhtml/system_config_source_country</source_model>
                             <show_in_default>1</show_in_default>
@@ -2018,7 +2018,7 @@
                             <can_be_empty>1</can_be_empty>
                         </specificcountry>
 					</fields>
-				</payssion_paysbuyth>
+				</payssion_ebankingth>
 				<payssion_nganluongvn>
 					<label>Nganluong (via Payssion) - Vietnam</label>
 					<frontend_type>text</frontend_type>
