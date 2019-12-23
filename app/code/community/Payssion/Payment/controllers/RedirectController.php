@@ -34,13 +34,14 @@ class Payssion_Payment_RedirectController extends Mage_Core_Controller_Front_Act
             Mage::getSingleton('checkout/session')->getQuote()->setIsActive(false)->save();
             $this->_redirect('checkout/onepage/success', array('_secure'=>true));
     }
-
     
-    public function cancelAction()
+    public function backAction()
     {
         $event = $this->getRequest()->getParams();
         $transaction_id= $event['transaction_id'];
-        $this->_getCheckout()->addError(Mage::helper('payssion')->__('The order has been canceled. Order #').$transaction_id);
+        if (isset($event['state']) && 'cancelled' == $event['state']) {
+        	$this->_getCheckout()->addError(Mage::helper('payssion')->__('The order has been canceled. Order #') . $transaction_id);
+        }
         $this->_redirect('checkout/cart');
     }
 }

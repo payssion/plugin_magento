@@ -70,7 +70,7 @@ class Payssion_Payment_Model_Payssion extends Mage_Payment_Model_Method_Abstract
         	'pm_id' => $this->pm_id,
         	'track_id'            => $order_id,
             'success_url'     => Mage::getUrl('payssion/redirect/success', array('transaction_id' => $order_id)),
-            'redirect_url'        => Mage::getUrl('payssion/redirect/cancel', array('transaction_id' => $order_id)),
+            'redirect_url'        => Mage::getUrl('payssion/redirect/back', array('transaction_id' => $order_id)),
             'language'           => $this->getLocale(),
             'description'        => Mage::helper('payssion')->__('Payment for order #').$order_id,
             'amount'       => trim(round($order->getGrandTotal(), 2)),
