@@ -150,6 +150,7 @@ class Payssion_Payment_Model_Notify
     	
         $payment = $this->_order->getPayment();
         $payment->setTransactionId($this->getRequestData('transaction_id'))
+            ->setCurrencyCode($this->getRequestData('currency'))
             ->setPreparedMessage($this->_createNotifyComment(''))
             ->registerCaptureNotification($this->getRequestData('paid'));
 
