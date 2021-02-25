@@ -160,6 +160,30 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>PT</specificcountry>
 			</payssion_multibancopt>
+			<payssion_mybank>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionmybank</model>
+				<title>Mybank</title>
+                <allowspecific>1</allowspecific>
+                <specificcountry>IT</specificcountry>
+            </payssion_mybank>
+            <payssion_paybybankappgb>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionpaybybankappgb</model>
+				<title>Pay by Bank app</title>
+                <allowspecific>1</allowspecific>
+                <specificcountry>GB</specificcountry>
+            </payssion_paybybankappgb>
+            <payssion_trustly>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiontrustly</model>
+				<title>Trustly</title>
+                <allowspecific>1</allowspecific>
+                <specificcountry>BE,CZ,DE,DK,EE,ES,FI,LT,LV,NL,NO,PL,SE,SK,GB</specificcountry>
+            </payssion_trustly>
 			<payssion_p24pl>
 			    <group>payssion</group>
 				<active>0</active>
