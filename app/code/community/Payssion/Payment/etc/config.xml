@@ -95,7 +95,7 @@
 				<title>Alipay</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>CN</specificcountry>
-			</payssion_alipaycn>>
+			</payssion_alipaycn>
 		    <payssion_tenpaycn>
 		        <group>payssion</group>
 				<active>0</active>
@@ -103,7 +103,7 @@
 				<title>Tenpay</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>CN</specificcountry>
-			</payssion_tenpaycn>>
+			</payssion_tenpaycn>
 			<payssion_unionpaycn>
 		        <group>payssion</group>
 				<active>0</active>
@@ -111,7 +111,39 @@
 				<title>Unionpay</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>CN</specificcountry>
-			</payssion_unionpaycn>>
+			</payssion_unionpaycn>
+			<payssion_alipayhk>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionalipayhk</model>
+				<title>Alipay HK</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>HK</specificcountry>
+			</payssion_alipayhk>
+			<payssion_creditcardtw>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssioncreditcardtw</model>
+				<title>Credit Card</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TW</specificcountry>
+			</payssion_creditcardtw>
+			<payssion_payinstoretw>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionpayinstoretw</model>
+				<title>Convenience Store</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TW</specificcountry>
+			</payssion_payinstoretw>
+			<payssion_atmtw>
+		        <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionatmtw</model>
+				<title>ATM</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TW</specificcountry>
+			</payssion_atmtw>
 		    <payssion_sofort>
 		        <group>payssion</group>
 				<active>0</active>
@@ -261,6 +293,30 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>MY</specificcountry>
 			</payssion_fpxmy>
+			<payssion_boostmy>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionboostmy</model>
+				<title>Boost</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>MY</specificcountry>
+			</payssion_boostmy>
+			<payssion_touchngomy>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiontouchngomy</model>
+				<title>Touch 'N Go</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>MY</specificcountry>
+			</payssion_touchngomy>
+			<payssion_grabpaymy>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiongrabpaymy</model>
+				<title>Grabpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>MY</specificcountry>
+			</payssion_grabpaymy>
 			<payssion_rhbmy>
 			    <group>payssion</group>
 				<active>0</active>
@@ -333,6 +389,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>MY</specificcountry>
 			</payssion_7elevenmy>
+			<payssion_paynowsg>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionpaynowsg</model>
+				<title>PayNow</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>SG</specificcountry>
+			</payssion_paynowsg>
 			<payssion_enetssg>
 			    <group>payssion</group>
 				<active>0</active>
@@ -357,6 +421,86 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>PH</specificcountry>
 			</payssion_dragonpayph>
+			<payssion_gcashph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiongcashph</model>
+				<title>Gcash</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_gcashph>
+			<payssion_grabpayph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiongrabpayph</model>
+				<title>Grabpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_grabpayph>
+			<payssion_instapayph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssioninstapayph</model>
+				<title>instapay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_instapayph>
+			<payssion_ovoid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionovoid</model>
+				<title>OVO</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_ovoid>
+			<payssion_danaid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiondanaid</model>
+				<title>DANA</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_danaid>
+			<payssion_linkajaid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionlinkajaid</model>
+				<title>LinkAja</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_linkajaid>
+			<payssion_shopeepayid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionshopeepayid</model>
+				<title>ShopeePay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_shopeepayid>
+			<payssion_dokuid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiondokuid</model>
+				<title>DOKU</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_dokuid>
+			<payssion_qrisid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionqrisid</model>
+				<title>QRIS</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_qrisid>
+			<payssion_alfamartid>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionalfamartid</model>
+				<title>Alfamart</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>ID</specificcountry>
+			</payssion_alfamartid>
 			<payssion_atmvaid>
 			    <group>payssion</group>
 				<active>0</active>
@@ -365,6 +509,30 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>ID</specificcountry>
 			</payssion_atmvaid>
+			<payssion_promptpayth>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionpromptpayth</model>
+				<title>Promptpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TH</specificcountry>
+			</payssion_promptpayth>
+			<payssion_truemoneyth>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiontruemoneyth</model>
+				<title>Truemoney</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TH</specificcountry>
+			</payssion_truemoneyth>
+			<payssion_shopeepayth>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionshopeepayth</model>
+				<title>Shopeepay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>TH</specificcountry>
+			</payssion_shopeepayth>
 			<payssion_ebankingth>
 			    <group>payssion</group>
 				<active>0</active>
