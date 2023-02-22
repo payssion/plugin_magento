@@ -541,14 +541,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>TH</specificcountry>
 			</payssion_ebankingth>
-			<payssion_nganluongvn>
+			<payssion_vietqrvn>
 			    <group>payssion</group>
 				<active>0</active>
-				<model>payssion/payssionnganluongvn</model>
-				<title>Nganluong</title>
+				<model>payssion/payssionvietqrvn</model>
+				<title>VietQR</title>
 				<allowspecific>1</allowspecific>
                 <specificcountry>VN</specificcountry>
-			</payssion_nganluongvn>
+			</payssion_vietqrvn>
 			<payssion_boletobr>
 			    <group>payssion</group>
 				<active>0</active>
