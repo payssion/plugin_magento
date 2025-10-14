@@ -277,6 +277,14 @@
 				<model>payssion/payssionwebmoney</model>
 				<title>WebMoney</title>
 			</payssion_webmoney>
+			<payssion_duitnowmy>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionduitnowmy</model>
+				<title>DuitNow</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>MY</specificcountry>
+			</payssion_duitnowmy>
 			<payssion_maybank2umy>
 			    <group>payssion</group>
 				<active>0</active>
@@ -421,6 +429,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>PH</specificcountry>
 			</payssion_dragonpayph>
+			<payssion_ebankingph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionebankingph</model>
+				<title>Phippines online banking</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_ebankingph>
 			<payssion_gcashph>
 			    <group>payssion</group>
 				<active>0</active>
@@ -445,6 +461,38 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>PH</specificcountry>
 			</payssion_instapayph>
+			<payssion_mayaph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionmayaph</model>
+				<title>Maya</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_mayaph>
+			<payssion_pesonetph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionpesonetph</model>
+				<title>PESONet</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_pesonetph>
+			<payssion_qrph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionqrph</model>
+				<title>QR Ph</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_qrph>
+			<payssion_shopeepayph>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionshopeepayph</model>
+				<title>ShopeePay PH</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>PH</specificcountry>
+			</payssion_shopeepayph>
 			<payssion_ovoid>
 			    <group>payssion</group>
 				<active>0</active>
@@ -589,6 +637,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>BR</specificcountry>
 			</payssion_bancodobrasilbr>
+			<payssion_pixbr>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssiopixbr</model>
+				<title>PIX</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>BR</specificcountry>
+			</payssion_pixbr>
 			<payssion_bancomermx>
 			    <group>payssion</group>
 				<active>0</active>
@@ -668,6 +724,14 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>FR</specificcountry>
 			</payssion_neosurf>
+			<payssion_afterpayus>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionafterpayus</model>
+				<title>Afterpay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>US</specificcountry>
+			</payssion_afterpayus>
 			<payssion_openbucks>
 			    <group>payssion</group>
 				<active>0</active>
@@ -676,6 +740,30 @@
 				<allowspecific>1</allowspecific>
                 <specificcountry>US</specificcountry>
 			</payssion_openbucks>
+			<payssion_creditcardkr>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssioncreditcardkr</model>
+				<title>South Korea Credit Card</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>KR</specificcountry>
+			</payssion_creditcardkr>
+			<payssion_kakaopaykr>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionkakaopaykr</model>
+				<title>Kakao Pay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>KR</specificcountry>
+			</payssion_kakaopaykr>
+			<payssion_naverpaykr>
+			    <group>payssion</group>
+				<active>0</active>
+				<model>payssion/payssionnaverpaykr</model>
+				<title>Naver Pay</title>
+				<allowspecific>1</allowspecific>
+                <specificcountry>KR</specificcountry>
+			</payssion_naverpaykr>
 		</payment>
 	</default>
 </config>
